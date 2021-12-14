@@ -29,7 +29,7 @@ import scala.io.Source
           producer.send(record)
         }
         catch {
-          case e: TimeoutException => println(s"Error occurred sending : $record")
+          case e: Exception => e.printStackTrace() 
         }
       }
 
